@@ -1,0 +1,4 @@
+Deploying contracts with the account: 0x782faC2A762A329e00e2007f6091A8270E002F74
+Account balance: 5000000000000000
+deployer address: 0x782faC2A762A329e00e2007f6091A8270E002F74
+wawecontract deployed to 0xd3119cF15a2C983e6fA744dEfeD9c6051A8B7Fd7
