@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import { ethers, utils } from "ethers";
+import abi from "./contracts/Wave.json";
 
-function App() {
+const App = () => {
+  const [isWalletConnected, setIsWalletConnected] = useState(false);
+  const [userName, setUserName] = useState("initial name");
+  const contractAddress = "0xd3119cF15a2C983e6fA744dEfeD9c6051A8B7Fd7";
+
+  const contractABI = abi.abi;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Wagmi Project</h1>
+      <button>Wave</button>
+      <p> {userName} </p>
     </div>
   );
-}
+};
 
 export default App;
