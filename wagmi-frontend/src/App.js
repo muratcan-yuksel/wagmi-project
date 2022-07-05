@@ -4,7 +4,8 @@ import abi from "./contracts/Wave.json";
 
 const App = () => {
   const [isWalletConnected, setIsWalletConnected] = useState(false);
-  const [userName, setUserName] = useState("initial name");
+  const [userName, setUserName] = useState("");
+  const [displayedUserName, setDisplayedUserName] = useState("initial name");
   const [error, setError] = useState(null);
   const contractAddress = "0xd3119cF15a2C983e6fA744dEfeD9c6051A8B7Fd7";
   const contractABI = abi.abi;
@@ -27,7 +28,13 @@ const App = () => {
     }
   };
 
-  const handleInput = async (e) => {
+  const handleInput = (name) => {
+    // setUserName(name);
+    console.log(name.target.value);
+    setUserName(name.target.value);
+  };
+
+  const handleClick = async (e) => {
     e.preventDefault();
     if (window.ethereum) {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -44,18 +51,20 @@ const App = () => {
       console.log("setting user name");
       await txn.wait();
       console.log("user name set", txn.hash);
+      setDisplayedUserName(userName);
     }
   };
 
   useEffect(() => {
     // checkIfWalletIsConnected();
-  }, [isWalletConnected]);
+  }, []);
 
   return (
     <div>
       <h1>Wagmi Project</h1>
-      <button onClick={handleInput}>Wave</button>
-      <p> {userName} </p>
+      <input onChange={handleInput} type="text" />
+      <button onClick={handleClick}>Wave</button>
+      <p> {displayedUserName} waved!</p>
     </div>
   );
 };
