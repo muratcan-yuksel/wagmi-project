@@ -9,11 +9,6 @@ const App = () => {
   const contractAddress = "0xd3119cF15a2C983e6fA744dEfeD9c6051A8B7Fd7";
   const contractABI = abi.abi;
 
-  const handleInput = (e) => {
-    e.preventDefault();
-    console.log("clicked");
-  };
-
   const checkIfWalletIsConnected = async () => {
     try {
       if (window.ethereum) {
@@ -32,8 +27,28 @@ const App = () => {
     }
   };
 
+  const handleInput = async (e) => {
+    e.preventDefault();
+    if (window.ethereum) {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      const waveContract = new ethers.Contract(
+        contractAddress,
+        contractABI,
+        signer
+      );
+
+      const txn = await waveContract.setName(
+        utils.formatBytes32String(userName)
+      );
+      console.log("setting user name");
+      await txn.wait();
+      console.log("user name set", txn.hash);
+    }
+  };
+
   useEffect(() => {
-    checkIfWalletIsConnected();
+    // checkIfWalletIsConnected();
   }, [isWalletConnected]);
 
   return (
