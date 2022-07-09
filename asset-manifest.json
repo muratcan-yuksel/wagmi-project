@@ -1,0 +1,34 @@
+{
+  "files": {
+    "static/js/0.afe1c73e.chunk.js": "/muratcan-yuksel/wagmi-project/static/js/0.afe1c73e.chunk.js",
+    "static/js/0.afe1c73e.chunk.js.map": "/muratcan-yuksel/wagmi-project/static/js/0.afe1c73e.chunk.js.map",
+    "main.css": "/muratcan-yuksel/wagmi-project/static/css/main.8bea8986.chunk.css",
+    "main.js": "/muratcan-yuksel/wagmi-project/static/js/main.98aac87f.chunk.js",
+    "main.js.map": "/muratcan-yuksel/wagmi-project/static/js/main.98aac87f.chunk.js.map",
+    "runtime-main.js": "/muratcan-yuksel/wagmi-project/static/js/runtime-main.222f565f.js",
+    "runtime-main.js.map": "/muratcan-yuksel/wagmi-project/static/js/runtime-main.222f565f.js.map",
+    "static/js/3.060f8dcb.chunk.js": "/muratcan-yuksel/wagmi-project/static/js/3.060f8dcb.chunk.js",
+    "static/js/3.060f8dcb.chunk.js.map": "/muratcan-yuksel/wagmi-project/static/js/3.060f8dcb.chunk.js.map",
+    "static/js/4.92bd29bb.chunk.js": "/muratcan-yuksel/wagmi-project/static/js/4.92bd29bb.chunk.js",
+    "static/js/4.92bd29bb.chunk.js.map": "/muratcan-yuksel/wagmi-project/static/js/4.92bd29bb.chunk.js.map",
+    "static/js/5.e48b6f81.chunk.js": "/muratcan-yuksel/wagmi-project/static/js/5.e48b6f81.chunk.js",
+    "static/js/5.e48b6f81.chunk.js.map": "/muratcan-yuksel/wagmi-project/static/js/5.e48b6f81.chunk.js.map",
+    "static/js/6.0447f9d1.chunk.js": "/muratcan-yuksel/wagmi-project/static/js/6.0447f9d1.chunk.js",
+    "static/js/6.0447f9d1.chunk.js.map": "/muratcan-yuksel/wagmi-project/static/js/6.0447f9d1.chunk.js.map",
+    "static/js/7.5edf9259.chunk.js": "/muratcan-yuksel/wagmi-project/static/js/7.5edf9259.chunk.js",
+    "static/js/7.5edf9259.chunk.js.map": "/muratcan-yuksel/wagmi-project/static/js/7.5edf9259.chunk.js.map",
+    "static/js/8.d0095e8e.chunk.js": "/muratcan-yuksel/wagmi-project/static/js/8.d0095e8e.chunk.js",
+    "static/js/8.d0095e8e.chunk.js.map": "/muratcan-yuksel/wagmi-project/static/js/8.d0095e8e.chunk.js.map",
+    "index.html": "/muratcan-yuksel/wagmi-project/index.html",
+    "static/css/main.8bea8986.chunk.css.map": "/muratcan-yuksel/wagmi-project/static/css/main.8bea8986.chunk.css.map",
+    "static/js/0.afe1c73e.chunk.js.LICENSE.txt": "/muratcan-yuksel/wagmi-project/static/js/0.afe1c73e.chunk.js.LICENSE.txt",
+    "static/js/3.060f8dcb.chunk.js.LICENSE.txt": "/muratcan-yuksel/wagmi-project/static/js/3.060f8dcb.chunk.js.LICENSE.txt",
+    "static/js/4.92bd29bb.chunk.js.LICENSE.txt": "/muratcan-yuksel/wagmi-project/static/js/4.92bd29bb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.222f565f.js",
+    "static/js/4.92bd29bb.chunk.js",
+    "static/css/main.8bea8986.chunk.css",
+    "static/js/main.98aac87f.chunk.js"
+  ]
+}
