@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ethers, utils } from "ethers";
 import abi from "./contracts/Wave.json";
 import Profile from "./Profile";
+import "./App.css";
 import {
   WagmiConfig,
   createClient,
@@ -115,8 +116,13 @@ const App = () => {
     }
   };
 
+  const alertUser = () => {
+    alert("yoooo man what u doin'");
+  };
+
   useEffect(() => {
     // checkIfWalletIsConnected();
+    window.addEventListener("beforeunload", alertUser);
   }, []);
 
   let userInteraction;
@@ -131,7 +137,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className="App">
       <h1>Wagmi Project</h1>
 
       {/* <div>
