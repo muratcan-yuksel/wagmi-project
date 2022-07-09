@@ -87,6 +87,12 @@ const App = () => {
     setUserName(name.target.value);
   };
 
+  const handleChild = (status) => {
+    console.log(status);
+    console.log("clicked in parent");
+    setIsWalletConnected(true);
+  };
+
   const handleClick = async (e) => {
     e.preventDefault();
     if (window.ethereum) {
@@ -105,6 +111,7 @@ const App = () => {
       await txn.wait();
       console.log("user name set", txn.hash);
       setDisplayedUserName(userName);
+      handleChild();
     }
   };
 
@@ -112,14 +119,29 @@ const App = () => {
     // checkIfWalletIsConnected();
   }, []);
 
+  let userInteraction;
+  if (isWalletConnected === true) {
+    userInteraction = (
+      <div>
+        <input onChange={handleInput} type="text" />
+        <button onClick={handleClick}>Wave</button>
+        <p> {displayedUserName} waved!</p>
+      </div>
+    );
+  }
+
   return (
     <div>
       <h1>Wagmi Project</h1>
-      <input onChange={handleInput} type="text" />
-      <button onClick={handleClick}>Wave</button>
+
+      {/* <div>
+        <input onChange={handleInput} type="text" />
+        <button onClick={handleClick}>Wave</button>
       <p> {displayedUserName} waved!</p>
+      </div> */}
+      {userInteraction}
       <WagmiConfig client={client}>
-        <Profile />
+        <Profile handleChild={handleChild} />
       </WagmiConfig>
     </div>
   );

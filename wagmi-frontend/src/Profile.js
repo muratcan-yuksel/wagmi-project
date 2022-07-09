@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect } from "react";
 import {
   useAccount,
   useConnect,
@@ -6,8 +6,9 @@ import {
   useEnsAvatar,
   useEnsName,
 } from "wagmi";
+import "./style/profile.css";
 
-const Profile = () => {
+const Profile = ({ handleChild }) => {
   const { address, connector, isConnected } = useAccount();
   const { data: ensAvatar } = useEnsAvatar({ addressOrName: address });
   const { data: ensName } = useEnsName({ address });
@@ -15,10 +16,23 @@ const Profile = () => {
     useConnect();
   const { disconnect } = useDisconnect();
 
+  useEffect(() => {
+    console.log(isConnected);
+    // disconnect();
+
+    if (isConnected === true) {
+      handleChild(true);
+    }
+  });
+  //send some data to parent so that if isConnected is false,
+  //then make the connect button useless
+  //also, can you disconnect the user once they close the page?
+  //like, can you fire a function on page close?
+
   if (isConnected) {
     return (
       <div>
-        <img src={ensAvatar} alt="ENS Avatar" />
+        {/* <img src={ensAvatar} alt="ENS Avatar" /> */}
         <div>{ensName ? `${ensName} (${address})` : address}</div>
         <div>Connected to {connector.name}</div>
         <button onClick={disconnect}>Disconnect</button>
@@ -30,6 +44,7 @@ const Profile = () => {
     <div>
       {connectors.map((connector) => (
         <button
+          className="btn"
           disabled={!connector.ready}
           key={connector.id}
           onClick={() => connect({ connector })}

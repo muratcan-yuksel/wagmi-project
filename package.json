@@ -10,8 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.1",
-    "wagmi": "^0.5.6"
+    "dotenv": "^16.0.1"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
